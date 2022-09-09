@@ -1,12 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
-.chat-box{
-    display: flex;
-    justify-content: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
 .chats{
-    width: 50rem;
     height: 80vh;
-    max-width: 90%;
     border: 5px solid #0c0c35;
     border-top: 0px;
     border-bottom: 0px;

@@ -6,7 +6,7 @@ const Base = () => {
     <div className='base'>
         <div className='msg-box'>
             <input className='input' placeholder='Message...'></input>
-            <button className='btn'>Send</button>
+            <button className='btn'><i class="fa-sharp fa-solid fa-paper-plane"></i></button>
         </div>
     </div>
   )

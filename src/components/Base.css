@@ -1,20 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-.base{
-    display: flex;
-    justify-content: center;
-}
+
 .msg-box{
-    width: 50rem;
-    max-width: 90%;
     background-color: #0c0c35;
-    padding: 1rem 0;
+    padding: .5rem 0;
     display: flex;
     justify-content: space-between;
 }
 .input{
-    width: 20rem;
-    flex: 10;
-    margin: 0 .5rem 0 1rem;
+    flex: 1;
+    margin: 0 .3rem 0 .5rem;
     border-radius: 1rem;
     padding: .4rem 1rem;
     border: none;
@@ -24,8 +18,14 @@
     font-family: 'Poppins', sans-serif;
 }
 .btn{
-    width: 4rem;
-    flex: 2;
-    margin-right: 1rem;
-    border-radius: 1rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    margin-right: .5rem;
+    border-radius: 50%;
+}
+.btn i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
 }
