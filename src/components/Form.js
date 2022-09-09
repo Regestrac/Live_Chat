@@ -5,8 +5,8 @@ const Form = () => {
     return (
         <div className='form-box'>
             <form className='form'>
-                <label className='label'>Name</label>
-                <input placeholder='Name' className='name-input'></input>
+                <input className='name-input' autoComplete='off' type='text' required></input>
+                <label className='name-label'><span className='content-name'>Name</span></label>
                 <button className='enter-btn'>Enter Chat</button>
             </form>
         </div>
