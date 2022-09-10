@@ -7,8 +7,9 @@ import Form from './Form'
 import { useState } from 'react'
 
 const Home = () => {
-  const [isAuth, setIsAuth] = useState(false)
+  const [isAuth, setIsAuth] = useState(true)
   const [name, setName] = useState("")
+  const [message, setMessage] = useState("")
   console.log(name)
   return (
     <div className='home'>
@@ -17,8 +18,8 @@ const Home = () => {
           <Header />
         </div>
         <div className={!isAuth && "blur" } >
-          <ChatBox name={name} />
-          <Base />
+          <ChatBox name={name} message={message} />
+          <Base setMessage={setMessage} />
         </div>
        {!isAuth &&
         <div className='form-div'>
