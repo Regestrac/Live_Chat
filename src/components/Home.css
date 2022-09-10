@@ -10,6 +10,6 @@
 .head-div{
     z-index: 10;
 }
-.main .active{
+.blur{
     filter: blur(20px);
 }
