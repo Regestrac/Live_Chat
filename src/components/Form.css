@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 .form-box{
-    width: 20rem;
-    height: 15rem;
+    width: 23rem;
+    height: 20rem;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -36,7 +36,7 @@
     font-family: 'Russo One', sans-serif;
     margin: 1rem;
     position: absolute;
-    top: 3.7rem;
+    top: 3rem;
     color: #888888;
     box-sizing: border-box;
 }
@@ -47,13 +47,13 @@
     width: 0px;
     height: 100%;
     border-bottom: 3px solid rgb(10, 150, 255);
-    bottom: -2.1rem;
-    left: -8rem;
+    top: 2.25rem;
+    left: -9.5rem;
 }
 .content-name{
     position: absolute;
-    bottom: -2.25rem;
-    left: -2.5rem;
+    bottom: -2.5rem;
+    left: -2.75rem;
     transition: all 500ms ease;
 }
 .name-input:focus + .name-label .content-name, .name-input:valid + .name-label .content-name{
@@ -61,7 +61,7 @@
     transform: translateY(-2rem);
 }
 .name-input:focus + .name-label::after, .name-input:valid + .name-label::after{
-    width: 16rem;
+    width: 19rem;
     transform: translateX(0%);
     transition-duration: 500ms;
 }
@@ -75,4 +75,50 @@
     background-color: #0c0c35;
     font-family: 'Russo One', sans-serif;
     font-size: 1rem;
+}
+.room-input{
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    width: 80%;
+    background: transparent;
+    border-bottom: 1px solid #33333377;
+    text-align: center;
+    margin-top: 4rem;
+    transition-duration: 1s;
+    z-index: 1;
+}
+.room-label{
+    font-size: 1.8rem;
+    font-weight: 500;
+    font-family: 'Russo One', sans-serif;
+    margin: 1rem;
+    position: absolute;
+    top: 9rem;
+    color: #888888;
+    box-sizing: border-box;
+}
+.room-label::after{
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 100%;
+    border-bottom: 3px solid rgb(10, 150, 255);
+    bottom: -2.15rem;
+    left: -9.5rem;
+}
+.content-room{
+    position: absolute;
+    bottom: -2.25rem;
+    left: -3.5rem;
+    transition: all 500ms ease;
+}
+.room-input:focus + .room-label .content-room, .room-input:valid + .room-label .content-room{
+    color: #000;
+    transform: translateY(-2rem);
+}
+.room-input:focus + .room-label::after, .room-input:valid + .room-label::after{
+    width: 19rem;
+    transform: translateX(0%);
+    transition-duration: 500ms;
 }

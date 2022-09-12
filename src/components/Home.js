@@ -5,12 +5,16 @@ import ChatBox from './ChatBox'
 import Header from './Header'
 import Form from './Form'
 import { useState } from 'react'
+import io from "socket.io-client"
+
+const socket = io.connect("http://localhost:3001");
 
 const Home = () => {
-  const [isAuth, setIsAuth] = useState(true)
-  const [name, setName] = useState("")
+  const [isAuth, setIsAuth] = useState(false)
+  const [username, setUsername] = useState("")
+  const [roomId, setRoomId] = useState("")
   const [message, setMessage] = useState("")
-  console.log(name)
+
   return (
     <div className='home'>
       <div>
@@ -18,12 +22,12 @@ const Home = () => {
           <Header />
         </div>
         <div className={!isAuth && "blur" } >
-          <ChatBox name={name} message={message} />
+          <ChatBox username={username} roomId={roomId} message={message} />
           <Base setMessage={setMessage} />
         </div>
        {!isAuth &&
         <div className='form-div'>
-          <Form setIsAuth={setIsAuth} setName={setName} />
+          <Form setIsAuth={setIsAuth} setUsername={setUsername} setRoomId={setRoomId} socket={socket} />
         </div>}
       </div>
     </div>
