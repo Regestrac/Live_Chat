@@ -27,7 +27,7 @@ const Home = () => {
         </div>
        {!isAuth &&
         <div className='form-div'>
-          <Form setIsAuth={setIsAuth} setUsername={setUsername} setRoomId={setRoomId} socket={socket} />
+        <Form setIsAuth={setIsAuth} setUsername={setUsername} setRoomId={setRoomId} socket={socket} roomId={roomId} username={username} />
         </div>}
       </div>
     </div>
