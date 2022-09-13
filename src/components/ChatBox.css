@@ -35,3 +35,11 @@
     border-radius: .4rem;
     font-family: 'Poppins', sans-serif;
 }
+
+.chat-time{
+    color: #fff;
+    font-size: .6rem;
+    text-align: end;
+    margin-right: .5rem;
+    font-family: 'Poppins', sans-serif;
+}

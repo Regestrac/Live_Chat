@@ -5,8 +5,9 @@ const ChatBox = ({ username, roomId, message, socket }) => {
   return (
     <div className='chat-box'>
       <div className='chats'>
-        <p className='user-name'>{username}</p>
-        <p className='chat-text'>{message}Chat 0</p>
+        <div className='user-name'>{username}</div>
+        <div className='chat-text'>{message}Chat 0</div>
+        <div className='chat-time'>03:07 PM</div>
       </div >
     </div>
   )

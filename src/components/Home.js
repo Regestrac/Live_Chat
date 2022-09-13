@@ -23,7 +23,7 @@ const Home = () => {
         </div>
         <div className={!isAuth && "blur"} >
           <ChatBox username={username} roomId={roomId} message={message} socket={socket} />
-          <Base setMessage={setMessage} />
+          <Base setMessage={setMessage} socket={socket} roomId={roomId} username={username} />
         </div>
         {!isAuth &&
           <div className='form-div'>
