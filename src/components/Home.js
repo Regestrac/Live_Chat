@@ -21,14 +21,14 @@ const Home = () => {
         <div className='head-div'>
           <Header />
         </div>
-        <div className={!isAuth && "blur" } >
-          <ChatBox username={username} roomId={roomId} message={message} />
+        <div className={!isAuth && "blur"} >
+          <ChatBox username={username} roomId={roomId} message={message} socket={socket} />
           <Base setMessage={setMessage} />
         </div>
-       {!isAuth &&
-        <div className='form-div'>
-        <Form setIsAuth={setIsAuth} setUsername={setUsername} setRoomId={setRoomId} socket={socket} roomId={roomId} username={username} />
-        </div>}
+        {!isAuth &&
+          <div className='form-div'>
+            <Form setIsAuth={setIsAuth} setUsername={setUsername} setRoomId={setRoomId} socket={socket} roomId={roomId} username={username} />
+          </div>}
       </div>
     </div>
   )

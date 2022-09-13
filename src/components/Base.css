@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
-.msg-box{
+.msg-box {
     background-color: #0c0c35;
     padding: .5rem 0;
     display: flex;
     justify-content: space-between;
 }
-.input{
+
+.input {
     flex: 1;
     margin: 0 .3rem 0 .5rem;
     border-radius: 1rem;
@@ -17,13 +18,15 @@
     font-weight: 500;
     font-family: 'Poppins', sans-serif;
 }
-.btn{
+
+.btn {
     height: 2.5rem;
     width: 2.5rem;
     margin-right: .5rem;
     border-radius: 50%;
 }
-.btn i{
+
+.btn i {
     display: flex;
     align-items: center;
     justify-content: center;

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
-.form-box{
+
+.form-box {
     width: 23rem;
     height: 20rem;
     position: absolute;
@@ -10,7 +11,8 @@
     box-shadow: 2px 2px 1.5rem #00000088;
     background-color: aliceblue;
 }
-.form{
+
+.form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,7 +20,8 @@
     justify-content: center;
     position: relative;
 }
-.name-input{
+
+.name-input {
     font-size: 1.5rem;
     border: none;
     outline: none;
@@ -30,7 +33,8 @@
     transition-duration: 1s;
     z-index: 1;
 }
-.name-label{
+
+.name-label {
     font-size: 1.8rem;
     font-weight: 500;
     font-family: 'Russo One', sans-serif;
@@ -41,7 +45,7 @@
     box-sizing: border-box;
 }
 
-.name-label::after{
+.name-label::after {
     content: "";
     position: absolute;
     width: 0px;
@@ -50,22 +54,28 @@
     top: 2.25rem;
     left: -9.5rem;
 }
-.content-name{
+
+.content-name {
     position: absolute;
     bottom: -2.5rem;
     left: -2.75rem;
     transition: all 500ms ease;
 }
-.name-input:focus + .name-label .content-name, .name-input:valid + .name-label .content-name{
+
+.name-input:focus+.name-label .content-name,
+.name-input:valid+.name-label .content-name {
     color: #000;
     transform: translateY(-2rem);
 }
-.name-input:focus + .name-label::after, .name-input:valid + .name-label::after{
+
+.name-input:focus+.name-label::after,
+.name-input:valid+.name-label::after {
     width: 19rem;
     transform: translateX(0%);
     transition-duration: 500ms;
 }
-.enter-btn{
+
+.enter-btn {
     padding: .5rem 1rem;
     border-radius: .4rem;
     border: none;
@@ -76,7 +86,8 @@
     font-family: 'Russo One', sans-serif;
     font-size: 1rem;
 }
-.room-input{
+
+.room-input {
     font-size: 1.5rem;
     border: none;
     outline: none;
@@ -88,7 +99,8 @@
     transition-duration: 1s;
     z-index: 1;
 }
-.room-label{
+
+.room-label {
     font-size: 1.8rem;
     font-weight: 500;
     font-family: 'Russo One', sans-serif;
@@ -98,7 +110,8 @@
     color: #888888;
     box-sizing: border-box;
 }
-.room-label::after{
+
+.room-label::after {
     content: "";
     position: absolute;
     width: 0px;
@@ -107,17 +120,22 @@
     bottom: -2.15rem;
     left: -9.5rem;
 }
-.content-room{
+
+.content-room {
     position: absolute;
     bottom: -2.25rem;
     left: -3.5rem;
     transition: all 500ms ease;
 }
-.room-input:focus + .room-label .content-room, .room-input:valid + .room-label .content-room{
+
+.room-input:focus+.room-label .content-room,
+.room-input:valid+.room-label .content-room {
     color: #000;
     transform: translateY(-2rem);
 }
-.room-input:focus + .room-label::after, .room-input:valid + .room-label::after{
+
+.room-input:focus+.room-label::after,
+.room-input:valid+.room-label::after {
     width: 19rem;
     transform: translateX(0%);
     transition-duration: 500ms;

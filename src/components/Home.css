@@ -1,15 +1,14 @@
-.home{
-    width: 50rem;
-    max-width: 99%;
-    margin: 0 auto;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.home {
+    max-width: 50rem;
+    width: 98%;
+    margin: auto;
+    padding-top: .5rem;
 }
-.head-div{
+
+.head-div {
     z-index: 10;
 }
-.blur{
+
+.blur {
     filter: blur(20px);
 }
