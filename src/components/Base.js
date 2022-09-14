@@ -1,9 +1,8 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { useState } from 'react';
 import './Base.css'
-import {messageListContext} from './ChatBox'
-const Base = ({ socket, roomId, username }) => {
-  const setMessageList = useContext(messageListContext);
+
+const Base = ({ socket, roomId, username, setMessageList }) => {
   const [newMessage, setNewMessage] = useState("")
   const sendMessage = async(e) => {
     e.preventDefault();
@@ -24,7 +23,7 @@ const Base = ({ socket, roomId, username }) => {
       <div >
         <form className='msg-box' >
           <input className='input' value={newMessage} onChange={(e) => setNewMessage(e.target.value)} placeholder='Message...'></input>
-          <button className='btn' onClick={sendMessage} ><i class="fa-sharp fa-solid fa-paper-plane"></i></button>
+          <button className='btn' onClick={sendMessage} ><i className="fa-sharp fa-solid fa-paper-plane"></i></button>
         </form>
       </div>
     </div>

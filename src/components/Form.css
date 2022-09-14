@@ -107,8 +107,10 @@
     margin: 1rem;
     position: absolute;
     top: 9rem;
+    left: 8rem;
     color: #888888;
     box-sizing: border-box;
+    width: 100%;
 }
 
 .room-label::after {
@@ -118,7 +120,7 @@
     height: 100%;
     border-bottom: 3px solid rgb(10, 150, 255);
     bottom: -2.15rem;
-    left: -9.5rem;
+    left: -7rem;
 }
 
 .content-room {

@@ -2,7 +2,7 @@ import React from 'react'
 import './Header.css'
 
 const Header = ({roomId}) => {
-  const room = roomId ? "Room: "+roomId : "Global"
+  const room = roomId ? "Room: "+roomId : ""
   return (
     <div className='head'>
       <div className='header'>
