@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import './Base.css'
 
-const Base = ({ setMessage, socket, roomId, username }) => {
+const Base = ({ socket, roomId, username }) => {
   const [newMessage, setNewMessage] = useState("")
   const sendMessage = async(e) => {
     e.preventDefault();
@@ -14,7 +14,6 @@ const Base = ({ setMessage, socket, roomId, username }) => {
         time: new Date(Date.now()).getHours() % 12 +":"+ new Date(Date.now()).getMinutes() +" "+(new Date(Date.now()).getHours() < 12 ? "AM": "PM")
       }
       await socket.emit("send_message", messageData);
-      setMessage(newMessage);
     }
     setNewMessage("")
   }

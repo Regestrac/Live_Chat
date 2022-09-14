@@ -1,14 +1,23 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './ChatBox.css'
 
-const ChatBox = ({ username, roomId, message, socket }) => {
+const ChatBox = ({ message, socket, setMessage }) => {
+  
+  useEffect(()=>{
+    socket.on("receive_message",(data)=>{
+      console.log("Received message data: ");
+      console.log(data);
+      setMessage(data)
+    })
+  },[socket])
   return (
-    <div className='chat-box'>
+   <div className='chat-box'>
+   { message && 
       <div className='chats'>
-        <div className='user-name'>{username}</div>
-        <div className='chat-text'>{message}Chat 0</div>
-        <div className='chat-time'>03:07 PM</div>
-      </div >
+        <div className='user-name'>{message.author}</div>
+        <div className='chat-text'>{message.message}</div>
+        <div className='chat-time'>{message.time}</div>
+      </div > }
     </div>
   )
 }
