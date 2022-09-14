@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useState } from 'react';
 import './Base.css'
-
+import {messageListContext} from './ChatBox'
 const Base = ({ socket, roomId, username }) => {
+  const setMessageList = useContext(messageListContext);
   const [newMessage, setNewMessage] = useState("")
   const sendMessage = async(e) => {
     e.preventDefault();
@@ -14,8 +15,9 @@ const Base = ({ socket, roomId, username }) => {
         time: new Date(Date.now()).getHours() % 12 +":"+ new Date(Date.now()).getMinutes() +" "+(new Date(Date.now()).getHours() < 12 ? "AM": "PM")
       }
       await socket.emit("send_message", messageData);
+      setMessageList((list)=>[...list, messageData]);
     }
-    setNewMessage("")
+    setNewMessage("");
   }
   return (
     <div className='base'>

@@ -13,21 +13,20 @@ const Home = () => {
   const [isAuth, setIsAuth] = useState(false)
   const [username, setUsername] = useState("")
   const [roomId, setRoomId] = useState("")
-  const [message, setMessage] = useState("")
 
   return (
     <div className='home'>
       <div>
         <div className='head-div'>
-          <Header />
+          <Header roomId={roomId} />
         </div>
         <div className={!isAuth && "blur"} >
-          <ChatBox message={message} socket={socket} setMessage={setMessage} />
+          <ChatBox socket={socket} />
           <Base socket={socket} roomId={roomId} username={username} />
         </div>
         {!isAuth &&
           <div className='form-div'>
-            <Form setIsAuth={setIsAuth} setUsername={setUsername} setRoomId={setRoomId} socket={socket} roomId={roomId} username={username} />
+            <Form setIsAuth={setIsAuth} setUsername={setUsername} setRoomId={setRoomId} socket={socket} username={username} />
           </div>}
       </div>
     </div>
