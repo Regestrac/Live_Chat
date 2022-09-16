@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import './ChatBox.css'
+import ScrollToBottom from 'react-scroll-to-bottom';
 
 const ChatBox = ({ socket, setMessageList, messageList, username }) => {
   useEffect(() => {
@@ -8,9 +9,9 @@ const ChatBox = ({ socket, setMessageList, messageList, username }) => {
     })
   }, [socket]);
   return (
-    <div className='chat-box'>
-      {messageList && (
-        messageList.map((messageContent, index) => {
+    <div >
+        <ScrollToBottom className='chat-box'>
+        {messageList.map((messageContent, index) => {
           return (
             <div id={username === messageContent.author ? "you" : "other"}>
             <div className='chats' key={index}  >
@@ -20,8 +21,8 @@ const ChatBox = ({ socket, setMessageList, messageList, username }) => {
             </div >
             </div>
           )
-        })
-      )}
+        })}
+        </ScrollToBottom>
     </div>
   )
 }
