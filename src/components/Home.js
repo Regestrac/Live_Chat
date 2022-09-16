@@ -22,7 +22,7 @@ const Home = () => {
           <Header roomId={roomId} />
         </div>
         <div className={!isAuth && "blur"} >
-          <ChatBox socket={socket} setMessageList={setMessageList} messageList={messageList} />
+          <ChatBox socket={socket} setMessageList={setMessageList} messageList={messageList} username={username} />
           <Base socket={socket} roomId={roomId} username={username} setMessageList={setMessageList} />
         </div>
         {!isAuth &&
