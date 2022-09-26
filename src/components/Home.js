@@ -7,7 +7,7 @@ import Form from './Form'
 import { useState } from 'react'
 import io from "socket.io-client"
 
-const socket = io.connect("http://localhost:3001");
+const socket = io.connect("https://live-chat-custom-rooms.herokuapp.com");
 
 const Home = () => {
   const [isAuth, setIsAuth] = useState(false)

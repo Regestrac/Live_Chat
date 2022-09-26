@@ -13,8 +13,8 @@ const ChatBox = ({ socket, setMessageList, messageList, username }) => {
         <ScrollToBottom className='chat-box'>
         {messageList.map((messageContent, index) => {
           return (
-            <div id={username === messageContent.author ? "you" : "other"}>
-            <div className='chats' key={index}  >
+            <div key={index} id={username === messageContent.author ? "you" : "other"}>
+            <div className='chats' >
               <div className='user-name'>{messageContent.author}</div>
               <div className='chat-text'>{messageContent.message}</div>
               <div className='chat-time'>{messageContent.time}</div>

@@ -17,7 +17,7 @@ const Form = ({ setIsAuth, setUsername, setRoomId, socket, username }) => {
                 <input className='name-input' onChange={(e) => setUsername(e.target.value)} autoComplete='off' type='text' required></input>
                 <label className='name-label'><span className='content-name'>Name</span></label>
                 <input className='room-input' onChange={(e) => setRoom(e.target.value)} autoComplete='off' type='text' required></input>
-                <label className='room-label'><span className='content-room'>Create Room</span></label>
+                <label className='room-label'><span className='content-room'>Room ID</span></label>
                 <button className='enter-btn' onClick={joinRoom} >Enter Chat</button>
             </form>
         </div>
