@@ -126,7 +126,7 @@
 .content-room {
     position: absolute;
     bottom: -2.25rem;
-    left: -3.5rem;
+    left: -4rem;
     transition: all 500ms ease;
 }
 
@@ -141,4 +141,10 @@
     width: 19rem;
     transform: translateX(0%);
     transition-duration: 500ms;
+}
+.info-text{
+    font-size: .8rem;
+    font-weight: 200;
+    position: absolute;
+    transform: translateY(65%);
 }

@@ -1,22 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 
 .msg-box {
     background-color: #0c0c35;
     padding: .5rem 0;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-bottom: .5rem;
 }
 
 .input {
     flex: 1;
+    height: 2rem;
     margin: 0 .3rem 0 .5rem;
     border-radius: 1rem;
     padding: .4rem 1rem;
     border: none;
     outline: none;
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: 600;
     font-family: 'Poppins', sans-serif;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.input::-webkit-scrollbar {
+    display: none;
 }
 
 .btn {
